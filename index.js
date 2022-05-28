@@ -40,10 +40,17 @@ const firstUser = {
     gender: "Female",
     age: "17",
     email: "monica@dingdong.com",
-    favoriteColor: [],
+    favoriteColor: Array.from(new Set(["Yellow",
+        "Pink",
+        "White",
+        "Purple"
+    ])),
     isHavePet: "Yes",
     education: educationSet.get("firstEdu"),
-    favoriteRestaurant: []
+    favoriteRestaurant: Array.from(
+        new Set([
+            "Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"
+        ])),
 };
 
 const secondUser = {
@@ -51,31 +58,20 @@ const secondUser = {
     gender: "Male",
     age: "23",
     email: "wendy@dingdong.com",
-    favoriteColor: [],
+    favoriteColor: Array.from(new Set(["Blue",
+        "Black",
+        "Grey"
+    ])),
     isHavePet: "No",
     education: educationSet.get("secondEdu"),
-    favoriteRestaurant: []
+    favoriteRestaurant: Array.from(
+        new Set(["Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"]))
 };
 
-firstUser.favoriteColor = new Set(["Yellow",
-    "Pink",
-    "White",
-    "Purple"
-]);
-
-secondUser.favoriteColor = new Set(["Blue",
-    "Black",
-    "Grey"
-]);
-
-firstUser.favoriteRestaurant = new Set(["Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"]);
-secondUser.favoriteRestaurant = new Set(["Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"]);
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
-const users = [];
-users.push(firstUser)
-users.push(secondUser)
-    // console.log(JSON.stringify(users, null, 2));
+const users = [firstUser, secondUser];
+console.log(JSON.stringify(users, null, 2));
 
 
 // ! JANGAN MODIFIKASI LINE DI BAWAH
